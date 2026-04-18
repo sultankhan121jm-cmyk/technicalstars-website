@@ -1,10 +1,11 @@
-// require('dotenv').config();
+if (process.env.NODE_ENV !== 'production') {
+    require('dotenv').config();
+}
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const path = require('path');
 const Contact = require('./models/Contact');
-
 const app = express();
 
 // Middleware
@@ -52,7 +53,7 @@ app.post('/api/contact', async (req, res) => {
 });
 
 // Wildcard MUST be last — serves frontend for all non-API routes
-app.get('*', (req, res) => {
+app.get('/*splat', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
