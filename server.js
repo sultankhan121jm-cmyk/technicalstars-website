@@ -19,6 +19,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log('✅ MongoDB Connected Successfully'))
   .catch(err => console.error('❌ MongoDB Connection Error:', err));
+  mongoose.connection.on('error', err => {
+  console.error('🔥 MongoDB lost connection:', err);
+});
 
 // --- API ROUTES (must be before wildcard) ---
 app.post('/api/contact', async (req, res) => {
@@ -59,8 +62,7 @@ app.get('/*splat', (req, res) => {
 
 // Start Server
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, '0.0.0.0');
-app.listen(PORT, () => {
-  console.log(`🚀 Server running on port ${PORT}`);
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`🚀 Server running on http://0.0.0.0:${PORT}`);
   console.log(`📡 API Endpoint: http://localhost:${PORT}/api/contact`);
 });
