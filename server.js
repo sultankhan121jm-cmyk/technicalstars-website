@@ -56,13 +56,12 @@ app.post('/api/contact', async (req, res) => {
 });
 
 // Wildcard MUST be last — serves frontend for all non-API routes
-app.get('/*splat', (req, res) => {
+app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
 // Start Server
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, '0.0.0.0', () => {
-  console.log(`🚀 Server running on http://0.0.0.0:${PORT}`);
-  console.log(`📡 API Endpoint: http://localhost:${PORT}/api/contact`);
+app.listen(PORT, () => {
+  console.log(`🚀 Server running on port ${PORT}`);
 });
