@@ -11,7 +11,7 @@
         :root {
             --primary: #002855;
             --primary-light: #004080;
-            --secondary: #FF6200;
+            --secondary: #FF6200;   
             --secondary-light: #FF8A3D;
             --accent: #00B4D8;
             --accent-dark: #0096B7;
@@ -1269,7 +1269,7 @@
 
             try {
                 // Replace this URL with your live Backend URL when deployed
-                const response = await fetch('http://localhost:5000/api/contact', {
+                const response = await fetch('/api/contact',  {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ 
