@@ -6,11 +6,11 @@
     <title>التكييف والسباكة والكهرباء - الرياض | Swift Home Fix</title>
     <meta name="description" content="خدمات سباكة وكهرباء وتكييف احترافية في الرياض. فنيون مرخصون، ضمان شامل، وخدمة سريعة خلال 60 دقيقة.">
 
-    <!-- ✅ Favicon (Updated to new logo) -->
+    <!-- ✅ Favicon -->
     <link rel="icon" type="image/png" href="https://z-cdn-media.chatglm.cn/files/2c8f965e-4c8e-4ed5-b636-32078c143950.png?auth_key=1876550378-961c21ea7e594091b34b928ffff02aad-0-a7a46b4dcec481ead8e55ed3fa4aaa50">
     <link rel="apple-touch-icon" href="https://z-cdn-media.chatglm.cn/files/2c8f965e-4c8e-4ed5-b636-32078c143950.png?auth_key=1876550378-961c21ea7e594091b34b928ffff02aad-0-a7a46b4dcec481ead8e55ed3fa4aaa50">
 
-    <!-- ✅ Open Graph (WhatsApp / Social Sharing Preview) - Updated -->
+    <!-- ✅ Open Graph -->
     <meta property="og:title" content="التكييف والسباكة والكهرباء - الرياض | Swift Home Fix">
     <meta property="og:description" content="خدمات منزلية احترافية في الرياض. فنيون مرخصون، ضمان شامل، استجابة خلال 60 دقيقة.">
     <meta property="og:image" content="https://z-cdn-media.chatglm.cn/files/2c8f965e-4c8e-4ed5-b636-32078c143950.png?auth_key=1876550378-961c21ea7e594091b34b928ffff02aad-0-a7a46b4dcec481ead8e55ed3fa4aaa50">
@@ -18,7 +18,7 @@
     <meta property="og:type" content="website">
     <meta property="og:locale" content="ar_SA">
 
-    <!-- ✅ Twitter Card - Updated -->
+    <!-- ✅ Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Swift Home Fix - خدمات منزلية احترافية">
     <meta name="twitter:description" content="خدمات تكييف وسباكة وكهرباء في الرياض">
@@ -29,8 +29,23 @@
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://technicalstars.online">
 
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- 🚀 PERFORMANCE FIX 1: Preconnect to external domains to speed up connection -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://z-cdn-media.chatglm.cn" crossorigin>
+
+    <!-- 🚀 PERFORMANCE FIX 2: Preload LCP Image (Hero Background) so browser downloads it instantly -->
+    <link rel="preload" as="image" fetchpriority="high" href="https://z-cdn-media.chatglm.cn/files/4bc876fb-0bf6-4dc3-907d-444b713a829c.jpg?auth_key=1876352431-e5fab98884884cf684576907a29980b5-0-93adbd7de6289b3b780a5a01f7c75db1">
+
+    <!-- 🚀 PERFORMANCE FIX 3: Load Fonts Asynchronously (No Render Blocking) + Reduced Font Weights -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;800&display=swap"></noscript>
+    
+    <!-- 🚀 PERFORMANCE FIX 4: Load Font Awesome Asynchronously (No Render Blocking) -->
+    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
+
     <style>
         :root {
             --primary: #002855;
@@ -115,7 +130,7 @@
 
         .logo-group { display: flex; align-items: center; gap: 12px; }
         .logo-img {
-            width: 48px; height: 48px; border-radius: 8px; /* Changed to 8px to accommodate text logo */
+            width: 48px; height: 48px; border-radius: 8px; 
             object-fit: contain; flex-shrink: 0;
             filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
         }
@@ -382,7 +397,7 @@
             background: radial-gradient(circle, rgba(255,98,0,0.2), transparent 70%); border-radius: 50%;
         }
         .contact-info-side .side-logo {
-            width: 80px; height: 80px; border-radius: 8px; /* Changed to 8px */
+            width: 80px; height: 80px; border-radius: 8px; 
             object-fit: contain;
             margin-bottom: 20px; position: relative;
         }
@@ -490,7 +505,7 @@
         .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 40px; margin-bottom: 40px; }
         .footer-brand { display: flex; flex-direction: column; gap: 4px; }
         .footer-logo-row { display: flex; align-items: center; gap: 12px; }
-        .footer-logo-img { width: 44px; height: 44px; border-radius: 8px; /* Changed to 8px */ object-fit: contain; }
+        .footer-logo-img { width: 44px; height: 44px; border-radius: 8px; object-fit: contain; }
         .footer-brand .logo-text .ar-name { color: white; }
         .footer-brand .logo-text .en-name { color: rgba(255,255,255,0.4); }
         .footer-brand > p { margin-top: 14px; font-size: 0.9rem; line-height: 1.8; }
@@ -599,8 +614,7 @@
 
     <nav id="navbar" role="navigation" aria-label="القائمة الرئيسية">
         <div class="logo-group">
-            <!-- ✅ Updated Logo Source -->
-            <img src="https://z-cdn-media.chatglm.cn/files/2c8f965e-4c8e-4ed5-b636-32078c143950.png?auth_key=1876550378-961c21ea7e594091b34b928ffff02aad-0-a7a46b4dcec481ead8e55ed3fa4aaa50" alt="شعار سويفت هوم فيكس" class="logo-img">
+            <img src="https://z-cdn-media.chatglm.cn/files/2c8f965e-4c8e-4ed5-b636-32078c143950.png?auth_key=1876550378-961c21ea7e594091b34b928ffff02aad-0-a7a46b4dcec481ead8e55ed3fa4aaa50" alt="شعار سويفت هوم فيكس" class="logo-img" width="48" height="48">
             <div class="logo-text">
                 <span class="ar-name">التكييف والسباكة والكهرباء</span>
                 <span class="en-name">SWIFT HOME FIX</span>
@@ -862,8 +876,7 @@
         </div>
         <div class="contact-wrapper reveal">
             <div class="contact-info-side">
-                <!-- ✅ Updated Logo Source -->
-                <img src="https://z-cdn-media.chatglm.cn/files/2c8f965e-4c8e-4ed5-b636-32078c143950.png?auth_key=1876550378-961c21ea7e594091b34b928ffff02aad-0-a7a46b4dcec481ead8e55ed3fa4aaa50" alt="شعار الشركة" class="side-logo">
+                <img src="https://z-cdn-media.chatglm.cn/files/2c8f965e-4c8e-4ed5-b636-32078c143950.png?auth_key=1876550378-961c21ea7e594091b34b928ffff02aad-0-a7a46b4dcec481ead8e55ed3fa4aaa50" alt="شعار الشركة" class="side-logo" loading="lazy" width="80" height="80">
                 <h3>نحن هنا لمساعدتك</h3>
                 <p>تواصل معنا بأي طريقة تناسبك. فريقنا جاهز على مدار الساعة.</p>
                 <div class="contact-detail">
@@ -975,8 +988,7 @@
         <div class="footer-grid">
             <div class="footer-brand">
                 <div class="footer-logo-row">
-                    <!-- ✅ Updated Logo Source -->
-                    <img src="https://z-cdn-media.chatglm.cn/files/2c8f965e-4c8e-4ed5-b636-32078c143950.png?auth_key=1876550378-961c21ea7e594091b34b928ffff02aad-0-a7a46b4dcec481ead8e55ed3fa4aaa50" alt="شعار الشركة" class="footer-logo-img">
+                    <img src="https://z-cdn-media.chatglm.cn/files/2c8f965e-4c8e-4ed5-b636-32078c143950.png?auth_key=1876550378-961c21ea7e594091b34b928ffff02aad-0-a7a46b4dcec481ead8e55ed3fa4aaa50" alt="شعار الشركة" class="footer-logo-img" loading="lazy" width="44" height="44">
                     <div class="logo-text">
                         <span class="ar-name">التكييف والسباكة والكهرباء</span>
                         <span class="en-name">SWIFT HOME FIX</span>
@@ -1111,12 +1123,13 @@
         const heroStats = document.querySelector('.hero-stats');
         if (heroStats) statsObserver.observe(heroStats);
 
-        // Network Canvas Animation
+        // 🚀 PERFORMANCE FIX 5: Stop Canvas Animation when user scrolls past the Hero (Saves CPU)
         const canvas = document.getElementById('heroCanvas');
         const ctx = canvas.getContext('2d');
         let particles = [];
         let animId;
         let mouse = { x: null, y: null, radius: 150 };
+        let canvasVisible = true; // Track visibility
 
         const resizeCanvas = () => {
             const hero = document.querySelector('.hero');
@@ -1190,6 +1203,7 @@
         };
 
         const animateParticles = () => {
+            if (!canvasVisible) return; // Stop loop if not visible
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             particles.forEach(p => { p.update(); p.draw(); });
             drawLines();
@@ -1205,6 +1219,17 @@
 
         resizeCanvas(); initParticles(); animateParticles();
         window.addEventListener('resize', () => { resizeCanvas(); initParticles(); });
+        
+        // Observer to pause animation
+        const canvasObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                canvasVisible = entry.isIntersecting;
+                if (canvasVisible) animateParticles();
+                else cancelAnimationFrame(animId);
+            });
+        }, { threshold: 0.05 });
+        canvasObserver.observe(document.querySelector('.hero'));
+
         if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
             cancelAnimationFrame(animId);
             ctx.clearRect(0, 0, canvas.width, canvas.height);
