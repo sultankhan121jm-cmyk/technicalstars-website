@@ -327,25 +327,6 @@
         }
         .gallery-item:hover .gallery-caption { opacity: 1; transform: translateY(0); }
 
-        .process-section { padding: 90px 5%; }
-        .process-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; position: relative; }
-        .process-steps::before {
-            content: ''; position: absolute; top: 40px; right: 12.5%; left: 12.5%;
-            height: 2px; background: linear-gradient(to left, var(--secondary), var(--accent), var(--secondary));
-            opacity: 0.25;
-        }
-        .step-card { text-align: center; position: relative; z-index: 1; }
-        .step-num {
-            width: 56px; height: 56px; border-radius: 50%; background: var(--card);
-            border: 3px solid var(--secondary);
-            display: flex; align-items: center; justify-content: center;
-            font-size: 1.2rem; font-weight: 900; color: var(--secondary);
-            margin: 0 auto 18px; transition: all 0.3s; box-shadow: var(--shadow-sm);
-        }
-        .step-card:hover .step-num { background: var(--secondary); color: white; transform: scale(1.1); }
-        .step-card h4 { font-weight: 700; font-size: 1.05rem; color: var(--primary); margin-bottom: 6px; }
-        .step-card p { color: var(--text-muted); font-size: 0.88rem; }
-
         .testimonials-section { padding: 90px 5%; background: var(--bg-alt); }
         .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
         .testimonial-card {
@@ -609,7 +590,6 @@
             <li><a href="#services">خدماتنا</a></li>
             <li><a href="#gallery">أعمالنا</a></li>
             <li><a href="#why-us">لماذا نحن</a></li>
-            <li><a href="#process">كيف نعمل</a></li>
             <li><a href="#testimonials">آراء العملاء</a></li>
             <li><a href="#contact" class="nav-cta">احجز الآن</a></li>
         </ul>
@@ -779,36 +759,6 @@
                 <div class="why-icon"><i class="fas fa-broom"></i></div>
                 <h4>نظافة تامة</h4>
                 <p>نترك المكان أنظف مما كان عليه قبل بدء العمل. احترام منزلك.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="process-section" id="process">
-        <div class="section-header reveal">
-            <div class="section-label"><i class="fas fa-route"></i> خطوات بسيطة</div>
-            <h2 class="section-title">كيف نعمل؟</h2>
-            <p class="section-subtitle">أربع خطوات سهلة للحصول على خدمة احترافية في منزلك</p>
-        </div>
-        <div class="process-steps stagger-grid">
-            <div class="step-card reveal">
-                <div class="step-num">1</div>
-                <h4>تواصل معنا</h4>
-                <p>اتصل أو أرسل عبر واتساب وصف المشكلة</p>
-            </div>
-            <div class="step-card reveal">
-                <div class="step-num">2</div>
-                <h4>تحديد الموعد</h4>
-                <p>نحدد معك وقتاً مناسباً للزيارة بأسرع وقت</p>
-            </div>
-            <div class="step-card reveal">
-                <div class="step-num">3</div>
-                <h4>الفحص والإصلاح</h4>
-                <p>يصل الفني المتخصص ويقوم بالإصلاح فوراً</p>
-            </div>
-            <div class="step-card reveal">
-                <div class="step-num">4</div>
-                <h4>الدفع والضمان</h4>
-                <p>ادفع بعد الرضا التام وتسلم الضمان الكتابي</p>
             </div>
         </div>
     </section>
@@ -1036,7 +986,7 @@
         navLinks.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 menuOpen = false;
-                navLinks.classList.remove('open');
+                navLinks.remove('open');
                 mobileToggle.querySelector('i').className = 'fas fa-bars';
             });
         });
