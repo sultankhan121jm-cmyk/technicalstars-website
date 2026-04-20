@@ -871,7 +871,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="contact-form-side">
                 <h3>أرسل طلبك</h3>
                 <p>سنرد عليك في أسرع وقت ممكن</p>
-                <form id="contactForm" novalidate>
+               <form action="send-mail.php" method="POST" id="contactForm" novalidate>
                     <div class="form-row">
                         <div class="form-group">
                             <label for="fname">الاسم الأول</label>
@@ -1090,6 +1090,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         let canvasVisible = true;
 
         const resizeCanvas = () => {
+            const isMobile = window.innerWidth < 768;
+            const count = isMobile ? 30 : 80; // Fewer particles on mobile
             const hero = document.querySelector('.hero');
             const dpr = window.devicePixelRatio || 1;
             canvas.width = hero.offsetWidth * dpr;
@@ -1234,11 +1236,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 } else {
                     throw new Error(data.message || 'فشل الإرسال');
                 }
-            } catch (error) {
-                showToast('تم استلام طلبك! سنتواصل معك قريباً');
-                btn.innerHTML = orig;
-                btn.disabled = false;
-            }
+           } catch (error) {
+    showToast('حدث خطأ في الاتصال، يرجى المحاولة لاحقاً');
+    btn.innerHTML = orig;
+    btn.disabled = false;
+}
         });
     </script>
 </body>
