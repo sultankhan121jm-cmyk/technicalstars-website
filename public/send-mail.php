@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $service = strip_tags(trim($_POST["service"]));
     $message = strip_tags(trim($_POST["message"]));
     
-    $recipient = "your-email@example.com"; // REPLACE WITH YOUR EMAIL
+    $recipient = "qazisultan121jm@gmail.com"; // REPLACE WITH YOUR EMAIL
     $subject = "New Service Request from: $name";
     
     $email_content = "Name: $name\n";
