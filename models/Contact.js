@@ -30,7 +30,7 @@ const contactSchema = new mongoose.Schema({
   },
   status: {
     type: String,
-    default: 'new' // new, contacted, completed
+    default: 'new' 
   }
 }, {
   timestamps: true // Automatically adds createdAt and updatedAt fields
